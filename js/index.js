@@ -1,5 +1,3 @@
-
-
 const menuTitle = document.getElementsByClassName("menu-title");
 const header = document.querySelector("header");
 const changeImg = document.getElementsByClassName("change-img");
@@ -32,22 +30,19 @@ function removeActive() {
 
 // 스크롤시 메뉴창 사라짐
 let zero = 0;
+menuScroll();
 
-window.addEventListener("scroll", () => {
-  if (window.scrollY >= 100) {
-    header.classList.add("scrolled");
-  } else {
-    header.classList.remove("scrolled");
-  }
-
-  if (zero < window.scrollY) {
-    header.classList.add("hide");
-  } else {
-    header.classList.remove("hide");
-  }
-
-  zero = window.scrollY;
-});
+function menuScroll() {
+  window.addEventListener("scroll", () => {
+    if (zero < window.scrollY && window.innerWidth >= 800) {
+      header.classList.add("hide");
+    } else {
+      header.classList.remove("hide");
+    }
+    zero = window.scrollY;
+  });
+}
+// window.innerwidth가 800px일 때, scroll event가 작동하지 않는다.
 
 // burgerButton();
 
@@ -57,7 +52,9 @@ const contentContainerWrapper =
 window.addEventListener("scroll", () => {
   // console.log(contentContainerWrapper[0].getBoundingClientRect().top);
   if (
-    contentContainerWrapper[0].getBoundingClientRect().top - window.scrollY / 2 < 0
+    contentContainerWrapper[0].getBoundingClientRect().top -
+      window.scrollY / 2 <
+    0
   ) {
     contentContainerWrapper[0].classList.add("active");
     // sectionMain.classList.add('change');
@@ -303,25 +300,23 @@ const burger = document.querySelector(".burger");
 const menuContainer = document.querySelector(".menu-container");
 
 function closeBurger() {
-  menuContainer.style.transform = 'translateX(460px)';
-    burger.classList.remove('toggle');
+  menuContainer.style.transform = "translateX(460px)";
+  burger.classList.remove("toggle");
 }
 
 function burgerButton() {
- burger.addEventListener("click", () => {
-  if(burger.classList.contains('toggle')){
-    closeBurger();
-  }else {
-    menuContainer.style.transform = 'translateX(0)';
-    burger.classList.add('toggle');
-  }
-
- });
- 
+  burger.addEventListener("click", () => {
+    if (burger.classList.contains("toggle")) {
+      closeBurger();
+    } else {
+      menuContainer.style.transform = "translateX(0)";
+      burger.classList.add("toggle");
+    }
+  });
 }
-window.addEventListener('scroll',()=>{
+window.addEventListener("scroll", () => {
   closeBurger();
-})
+});
 
 burgerButton();
 
@@ -344,7 +339,7 @@ const resetModal = 0;
 //   }  else {
 //     menuContainer.classList.remove("moved");
 //   }
-  
+
 // })
 
 // window.addEventListener("scroll", () => {
