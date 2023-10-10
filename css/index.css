@@ -1148,7 +1148,8 @@ header.open-menu {
  .starting-intro {
   margin-top: 70px;
  }
-/* 
+
+ /* 
  .opacity-wrapper {
   top: -830px;
  } */
@@ -1176,62 +1177,68 @@ header.open-menu {
  .section-scroll-btn {
   display: none;
  }
-  .mobile-scroll-btn {
- font-size: 16px;
- padding: 10px 30px;
- border: 3px solid white;
- border-radius: 25px;
- background-color: transparent;
- color: white;
- letter-spacing: 5px;
- font-weight: bold;
- position: relative;
- transition: all 0.4s;
- overflow: hidden;
- cursor: pointer;
 
-}
+ .mobile-scroll-btn {
+  font-size: 16px;
+  padding: 10px 30px;
+  border: 3px solid white;
+  border-radius: 25px;
+  background-color: transparent;
+  color: white;
+  letter-spacing: 5px;
+  font-weight: bold;
+  position: relative;
+  transition: all 0.4s;
+  overflow: hidden;
+  cursor: pointer;
 
-.mobile-scroll-btn:focus {
- outline: none;
-}
+ }
 
-.mobile-scroll-btn::before {
- content: '';
- position: absolute;
- height: 100%;
- width: 100%;
- /* background-color: gold; */
- top: 100%;
- left: 0;
- transition: all 0.4s;
- z-index: -1;
-}
+ .mobile-scroll-btn:focus {
+  outline: none;
+ }
 
-.mobile-scroll-btn:hover::before {
- transform: translateY(-100%);
-}
+ .mobile-scroll-btn::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  /* background-color: gold; */
+  top: 100%;
+  left: 0;
+  transition: all 0.4s;
+  z-index: -1;
+ }
 
-.mobile-scroll-btn:hover {
- /* background-color: white; */
- color: white;
- border: 3px solid black;
-}
+ .mobile-scroll-btn:hover::before {
+  transform: translateY(-100%);
+ }
+
+ .mobile-scroll-btn:hover {
+  /* background-color: white; */
+  color: white;
+  border: 3px solid black;
+ }
 
 
  .mobile-bold-text {
   font-size: 32px;
   font-weight: bold;
  }
- .bold-text, .section-content-btn {
+
+ .bold-text,
+ .section-content-btn {
   display: none;
  }
+
  .header.fixed {
   transform: translateY(0%);
  }
+
  .section-main-btn {
   display: none;
  }
+
  .section-sticky-container {
   padding: 0;
  }
@@ -1413,7 +1420,7 @@ header.open-menu {
   padding: 0 16px;
  }
 
- 
+
 
  /* .section-scroll-btn:hover {
     transform: scale(0);
@@ -1432,19 +1439,23 @@ header.open-menu {
   height: 100%; */
   /* background-color: #fff; */
  }
+
  .footer-mobile-container a {
   font-size: 18px;
   font-weight: bold;
   color: #333;
   display: block;
  }
+
  .footer-mobile-container div p {
   padding: 8px;
  }
+
  input[id*="accordion"] {
   display: none;
  }
- input[id*="accordion"] + label {
+
+ input[id*="accordion"]+label {
   display: block;
   padding: 20px;
   border: 1px solid black;
@@ -1455,7 +1466,8 @@ header.open-menu {
   cursor: pointer;
   position: relative;
  }
- input[id*="accordion"] + label em {
+
+ input[id*="accordion"]+label em {
   position: absolute;
   top: 50%;
   right: 10px;
@@ -1465,7 +1477,8 @@ header.open-menu {
   display: inline-block;
   background: url(/img/expand_more_FILL0_wght400_GRAD0_opsz24.png) 0 0 no-repeat;
  }
- input[id*="accordion"] + label + div {
+
+ input[id*="accordion"]+label+div {
   max-height: 0;
   transition: all .35s;
   overflow: hidden;
@@ -1473,18 +1486,21 @@ header.open-menu {
   background-color: white;
   font-size: 16px;
  }
- .input[id*="accordion"] + label + div p {
+
+ .input[id*="accordion"]+label+div p {
   display: inline-block;
   padding: 20px;
  }
-  input[id*="accordion"]:checked + label + div {
+
+ input[id*="accordion"]:checked+label+div {
   max-height: 220px;
   padding: 12px 16px;
  }
-  input[id*="accordion"]:checked + label em {
-   background: url(/img/expand_less_FILL0_wght400_GRAD0_opsz24.png) 0 0 no-repeat;
-   }
-  
+
+ input[id*="accordion"]:checked+label em {
+  background: url(/img/expand_less_FILL0_wght400_GRAD0_opsz24.png) 0 0 no-repeat;
+ }
+
 }
 
 
@@ -1495,15 +1511,19 @@ header.open-menu {
   align-items: center;
   justify-content: space-between;
  }
+
  .mobile-bold-text {
   display: none;
  }
+
  .media-query-img {
   display: none;
  }
+
  .section-btn {
   display: none;
  }
+
  .footer-mobile-container {
   display: none;
  }
@@ -1564,12 +1584,14 @@ header.open-menu {
   display: flex;
   align-items: center;
  }
-
- .notice-login-box>ul {
+ .notice-login-box {
+  font-size: 14px;
+ }
+ .notice-login-box > ul {
   display: flex;
  }
 
- .notice-login-box>ul>li {
+ .notice-login-box > ul > li {
   padding: 4px;
  }
 
