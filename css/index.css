@@ -283,9 +283,7 @@ header.open-menu {
  font-size: 20px;
  line-height: 1.4em;
 }
-
 .section-main-btn,
-.section-content-btn,
 .section-slide-btn {
  border: none;
  width: 140px;
@@ -298,24 +296,18 @@ header.open-menu {
 }
 
 .section-main-btn a,
-.section-content-btn a,
 .section-scroll-btn a,
 .section-slide-btn a {
  color: #222;
  font-weight: bold;
 }
 
-.section-content-btn:hover,
+
 .section-main-btn:hover,
 .section-scroll-btn:hover,
 .section-slide-btn:hover {
  transform: scale(1.2);
 }
-
-.section-content-btn:hover {
- box-shadow: #e5843b;
-}
-
 
 .section-content.active {
  width: 100%;
@@ -333,7 +325,7 @@ header.open-menu {
  width: 1200px;
  border-radius: 24px;
  position: relative;
- top: -50px;
+ top: -100px;
  z-index: 1;
  margin: 0 auto;
  /* margin-top: -100px; */
@@ -397,7 +389,7 @@ header.open-menu {
  height: 4000px;
  position: relative;
  z-index: 1;
- top: -50px;
+ top: -200px;
  font-family: 'NanumSquareNeo-Variable';
 }
 
@@ -435,7 +427,7 @@ header.open-menu {
 .opacity-text {
  opacity: 0;
  transition: all 1s;
- font-size: 16px;
+ font-size: 22px;
  font-weight: bold;
  color: white;
 }
@@ -1135,10 +1127,6 @@ header.open-menu {
   /* font-size: 12px; */
  }
 
- .section-content-btn {
-  margin-top: 0;
- }
-
  .content-wrapper {
   flex-direction: column;
   gap: 8px;
@@ -1174,6 +1162,9 @@ header.open-menu {
 }
 
 @media screen and (max-width: 800px) {
+ .opacity-text {
+  font-size: 16px;
+ }
  .section-scroll-btn {
   display: none;
  }
@@ -1226,8 +1217,7 @@ header.open-menu {
   font-weight: bold;
  }
 
- .bold-text,
- .section-content-btn {
+ .bold-text {
   display: none;
  }
 
@@ -1505,6 +1495,9 @@ header.open-menu {
 
 
 @media screen and (min-width: 801px) {
+ .mobile-scroll-btn {
+  display: none;
+ }
  .section-scroll-btn-container {
   width: 100%;
   /* gap: 100px; */
@@ -1584,14 +1577,16 @@ header.open-menu {
   display: flex;
   align-items: center;
  }
+
  .notice-login-box {
   font-size: 12px;
  }
- .notice-login-box > ul {
+
+ .notice-login-box>ul {
   display: flex;
  }
 
- .notice-login-box > ul > li {
+ .notice-login-box>ul>li {
   padding: 4px;
  }
 
