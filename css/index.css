@@ -1165,9 +1165,9 @@ header.open-menu {
  .opacity-text {
   font-size: 16px;
  }
- .section-scroll-btn {
+ /* .section-scroll-btn {
   display: none;
- }
+ } */
 
  .mobile-scroll-btn {
   font-size: 16px;
@@ -1429,7 +1429,9 @@ header.open-menu {
   height: 100%; */
   /* background-color: #fff; */
  }
-
+ .footer-mobile-container div p {
+   border-bottom: 1px solid black;
+ }
  .footer-mobile-container a {
   font-size: 18px;
   font-weight: bold;
@@ -1449,7 +1451,7 @@ header.open-menu {
   display: block;
   padding: 20px;
   border: 1px solid black;
-  border-bottom: 0;
+  /* border-bottom: 0; */
   color: black;
   font-weight: 900;
   background-color: #dcdcdc;
@@ -1750,7 +1752,8 @@ header.open-menu {
  color: white;
  letter-spacing: 5px;
  font-weight: bold;
- position: relative;
+ position: absolute;
+ top: 100%;
  transition: all 0.4s;
  overflow: hidden;
  cursor: pointer;
